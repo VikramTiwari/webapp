@@ -1,4 +1,5 @@
-node_modules
-public
+/node_modules/
 **/*.log
-**/.babel_cache
+/.babel_cache
+/frontend/public/app/dist/
+/frontend/public/index.html
