@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "description": "boilerplate for express and react based nodejs webapp",
   "main": "app.js",
+  "engine": "^8.0.0",
   "scripts": {
     "api": "node app.js",
     "api-hot": "nodemon app.js",
-    "deploy": "yarn run ui && echo \"NOTE: REPLACE_WITH_YOUR_DEPLOYMENT_SCRIPT\" ",
-    "dev": "yarn && concurrently --kill-others -p name -n 'backend,frontend' -c 'blue,green' 'yarn run api-hot' 'yarn run ui-hot'",
-    "start": "yarn run api",
+    "deploy": "npm run ui && echo \"NOTE: REPLACE_WITH_YOUR_DEPLOYMENT_SCRIPT\" ",
+    "dev": "npm install && concurrently --kill-others -p name -n 'backend,frontend' -c 'blue,green' 'npm run api-hot' 'npm run ui-hot'",
+    "start": "npm run api",
     "test": "echo \"YOLO\"",
     "ui": "NODE_ENV=production webpack --config ./frontend/webpack.config.js --mode production --bail",
     "ui-hot": "NODE_ENV=development webpack-dev-server --config ./frontend/webpack.config.js --mode development --progress"
