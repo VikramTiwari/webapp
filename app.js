@@ -6,8 +6,8 @@ const api = require('./backend/api')
 const PORT = 3000;
 
 app.use('/api', api)
-app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'frontend/dist')))
 
 app.listen(PORT, () => {
-  console.log('Ready Player One!');
+  console.log('API ready!');
 });
