@@ -9,7 +9,7 @@
     "api-hot": "nodemon app.js",
     "deploy": "npm run ui && echo \"NOTE: REPLACE_WITH_YOUR_DEPLOYMENT_SCRIPT\" ",
     "dev": "npm install && concurrently --kill-others -p name -n 'backend,frontend' -c 'blue,green' 'npm run api-hot' 'npm run ui-hot'",
-    "start": "npm run api",
+    "start": "PORT=8080 npm run api",
     "test": "echo \"YOLO\"",
     "ui": "NODE_ENV=production webpack --config ./frontend/webpack.config.js --mode production --bail",
     "ui-hot": "NODE_ENV=development webpack-dev-server --config ./frontend/webpack.config.js --mode development --progress"
