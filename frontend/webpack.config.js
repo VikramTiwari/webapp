@@ -39,7 +39,7 @@ let config = (module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.css'],
     alias: {
-      app: SRC_PATH,
+      webapp: SRC_PATH,
     },
   },
   plugins: [
